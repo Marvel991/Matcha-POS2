@@ -1206,7 +1206,7 @@
             transactionCounter: JSON.parse(localStorage.getItem('transactionCounter')) || 1,
             selectedPaymentMethod: 'cash',
             settings: {
-                taxRate: 0.1,
+                taxRate: 0.0,
                 currency: "IDR"
             },
             salesHistory: {
@@ -1893,7 +1893,6 @@
                 
                 receiptText += `\n`;
                 receiptText += `Subtotal: ${utils.formatCurrency(transaction.subtotal).padStart(30)}\n`;
-                receiptText += `Tax (10%): ${utils.formatCurrency(transaction.tax).padStart(28)}\n`;
                 receiptText += `Total: ${utils.formatCurrency(transaction.total).padStart(34)}\n\n`;
                 receiptText += `Payment Method: ${transaction.paymentMethod.toUpperCase()}\n`;
                 
